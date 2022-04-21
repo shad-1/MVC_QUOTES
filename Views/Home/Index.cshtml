@@ -1,9 +1,29 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Exceptional Excerpts";
 }
+@model List<Quotation>
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">"Knowledge Is Power."</h1>
+    <h6>&mdash;<em>School House Rock</em></h6>
 </div>
 
+@foreach (Quotation q in Model)
+    {
+<div class="my-4 p-relative card p-4">
+
+    <div class="d-flex justify-content-between my-2">
+        <div class="">
+            <div class="f-1_half">"@q.Quote"</div>
+            <div>&mdash;<em>@q.Author</em></div>
+        </div>
+        <div class="d-flex flex-column justify-content-end">
+            <a class="btn btn-outline-info" asp-controller="Home" asp-action="Details" asp-route-id="@q.Id">
+                Details
+            </a>
+        </div>
+        
+    </div>
+
+</div>
+}

@@ -1,0 +1,16 @@
+﻿.p-relative {
+    position: relative;
+}
+
+.h-min-content {
+    height: min-content;
+}
+
+.f-1_half {
+    font-size: 1.5rem;
+}
+
+.button-container {
+    display: inline-flex;
+    justify-content: center;
+}
